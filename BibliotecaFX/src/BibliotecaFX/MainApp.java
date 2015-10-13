@@ -25,6 +25,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -39,6 +40,7 @@ public class MainApp extends Application {
     private ObservableList<Usuario> usuariosList = FXCollections.observableArrayList();
     private ObservableList<Autor>  autoresList = FXCollections.observableArrayList();
     private ObservableList<Ejemplar> ejemplaresList = FXCollections.observableArrayList();
+    public enum CRUDOperation {None, Create, Read, Update, Delete};
     
     public MainApp(){
         
@@ -131,6 +133,36 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
 
+    }
+    
+    public boolean mostrarEditarAutor(Autor autor, CRUDOperation operacion){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("views/IngresarAutor.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Editar Autor");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(primaryStage);
+            Scene escena = new Scene(page);
+            dialogStage.setScene(escena);
+            dialogStage.setResizable(false);
+            IngresarAutorController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            controller.setOperacion(operacion);
+            controller.setAutor(autor);
+            
+            dialogStage.showAndWait();
+            
+            return controller.fuePresionadoOk();
+            
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            Alert error = Dialogs.getErrorDialog(Alert.AlertType.ERROR, "Biblioteca HT", null, "Error al cargar el archivo FXML", e);
+            error.showAndWait();
+            return false;
+        }
     }
 
     public Stage getPrimaryStage() {

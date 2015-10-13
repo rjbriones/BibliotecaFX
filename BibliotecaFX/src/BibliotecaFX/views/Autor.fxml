@@ -7,5 +7,26 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaFX.controllers.AutorController">
-    
+    <children>
+      <SplitPane dividerPositions="0.5" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tbvAutores" layoutX="14.0" layoutY="14.0" prefHeight="370.0" prefWidth="256.0">
+                    <columns>
+                      <TableColumn fx:id="tbcID" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="tbcNombre" prefWidth="75.0" text="Nombre" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                <Button layoutX="14.0" layoutY="346.0" mnemonicParsing="false" text="Ingresar" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="207.0" />
+                <Button layoutX="119.0" layoutY="346.0" mnemonicParsing="false" text="Editar" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="118.0" />
+                <Button layoutX="208.0" layoutY="346.0" mnemonicParsing="false" text="Eliminar" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="14.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>            
+   </children>
 </AnchorPane>

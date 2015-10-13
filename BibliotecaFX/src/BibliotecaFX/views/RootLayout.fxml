@@ -6,5 +6,30 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaFX.controllers.RootLayoutController">
-</AnchorPane>
+<BorderPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BibliotecaFX.controllers.RootLayoutController">
+<top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#salirAplicacion" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Views">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarAutoresCRUD" text="Autores" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarEjemplares" text="Ejemplares" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarLibrosCRUD" text="Libros" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarPrestamosCRUD" text="Prestamos" />
+                <MenuItem mnemonicParsing="false" onAction="#mostrarUsuariosCRUD" text="Usuarios" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
