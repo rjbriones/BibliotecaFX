@@ -174,7 +174,7 @@ public class LibroController {
 	}
 	
 	public void agregarLibro(Libro libro) {
-		Conexion.getInstancia().ejecutarConsulta("EXEC CrearLibro '" + libro.getNombre() + "', '" + libro.getIsbnLibro() + "', "  + EditorialManager.getInstancia().devolverIdEditorial(libro.getEditorial()) + ", " + libro.getPaginas());
+		Conexion.getInstancia().ejecutarConsulta("EXEC CrearLibro '" + libro.getNombre() + "', '" + libro.getIsbnLibro() + "', "  + EditorialController.getInstancia().devolverIdEditorial(libro.getEditorial()) + ", " + libro.getPaginas());
 	}
 	
 	public void editarLibro(int id, String a, String c, String d, int f) {

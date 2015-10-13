@@ -54,8 +54,8 @@ public class Conexion {
 		try{
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
 			System.out.println("¡Instancio el controlador correctamente!");
-			conexion = DriverManager.getConnection("jdbc:sqlserver://127.0.0.1\\SQL2013344:1433;databaseName=BibliotecaFX; user=kinal;password=sa");
-			System.out.println("¡Conexión realizada con exito!");
+			conexion = DriverManager.getConnection("jdbc:sqlserver://127.0.0.1\\SQL2013344:1433;databaseName=BibliotecaFX; user=sa;password=sa");
+			System.out.println("Conexion realizada con exito");
 			enunciado = conexion.createStatement();
 		}catch(Exception e){
 			System.out.println(e.getMessage());

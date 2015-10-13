@@ -14,13 +14,11 @@ import java.util.Calendar;
 import java.util.Date;
 import BibliotecaFX.models.Prestamo;
 import BibliotecaFX.helpers.Conexion;
-//import org.claudiocanel.utilidades.FechaHora;
-//import org.claudiocanel.utilidades.InformacionDelSistema;
 
 
 /**
  *
- * @author JD
+ * @author Marco
  */
 public class PrestamoController {
    
@@ -53,13 +51,13 @@ public class PrestamoController {
 		if (resultadoPrestamos != null) {
 			try {
 				while (resultadoPrestamos.next()) {
-					String idPrestamo = resultadoPrestamos.getString("idPrestamo");
-                                        String idLibro = resultadoPrestamos.getString("idLibro");
+					int idPrestamo = resultadoPrestamos.getInt("idPrestamo");
+                                        int idLibro = resultadoPrestamos.getInt("idLibro");
 					String nombreLibro = resultadoPrestamos.getString("Libro");
                                         String fechaPrestamo = resultadoPrestamos.getString("fechaPrestamo");
                                         String fechaEntrega = resultadoPrestamos.getString("fechaEntrega");
                                         String fechaDevolucion = resultadoPrestamos.getString("fechaDevolucion");
-                                        String entrega = resultadoPrestamos.getString("entrega");
+                                        boolean entrega = resultadoPrestamos.getBoolean("entrega");
 					Prestamo usuario = new Prestamo(idPrestamo, nombreLibro, fechaPrestamo, fechaDevolucion, entrega);
 					listaPrestamo.add(usuario);
 				}
@@ -76,8 +74,8 @@ public class PrestamoController {
 		if (resultadoPrestamos != null) {
 			try {
 				while (resultadoPrestamos.next()) {
-					String idPrestamo = resultadoPrestamos.getString("idPrestamo");
-                                        String idLibro = resultadoPrestamos.getString("idLibro");
+					int idPrestamo = resultadoPrestamos.getInt("idPrestamo");
+                                        int idLibro = resultadoPrestamos.getInt("idLibro");
 					String nombreLibro = resultadoPrestamos.getString("Libro");
                                         String fechaPrestamo = resultadoPrestamos.getString("fechaPrestamo");
                                         String fechaEntrega = resultadoPrestamos.getString("fechaEntrega");
@@ -99,8 +97,8 @@ public class PrestamoController {
 		if (resultadoPrestamos != null) {
 			try {
 				while (resultadoPrestamos.next()) {
-					String idPrestamo = resultadoPrestamos.getString("idPrestamo");
-                                        String idLibro = resultadoPrestamos.getString("idLibro");
+					int idPrestamo = resultadoPrestamos.getInt("idPrestamo");
+                                        int idLibro = resultadoPrestamos.getInt("idLibro");
 					String nombreLibro = resultadoPrestamos.getString("Libro");
                                         String fechaPrestamo = resultadoPrestamos.getString("fechaPrestamo");
                                         String fechaEntrega = resultadoPrestamos.getString("fechaEntrega");

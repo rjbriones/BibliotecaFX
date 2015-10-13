@@ -14,14 +14,14 @@ import java.text.SimpleDateFormat;
 public class Prestamo {
     SimpleDateFormat simpledf = new SimpleDateFormat("yyyy MMM dd");	
 	
-	private String idPrestamo;
+	private int idPrestamo;
 	private String idLibro;
 	private String fechaInicio;
 	private String fechaFin;
 	private String fechaEntrega = null;
 	private boolean devuelto = false;
 	
-	public Prestamo(String r0, String r1, String r2, String r3, boolean r4) {
+	public Prestamo(int r0, String r1, String r2, String r3, boolean r4) {
 		idPrestamo = r0;
 		idLibro = r1;
 		fechaInicio = r2;
@@ -29,7 +29,7 @@ public class Prestamo {
                 devuelto = r4;
 	}
 
-	public void setIdPrestamo(String valor) {
+	public void setIdPrestamo(int valor) {
 		idPrestamo = valor;
 	}
 	
@@ -53,9 +53,8 @@ public class Prestamo {
 	public void setDevolucion(boolean valor) {
 		devuelto = valor;
 	}
-	
-	//GET
-	public String getIdPrestamo() {
+
+	public int getIdPrestamo() {
 		return idPrestamo;
 	}
 	
@@ -78,8 +77,5 @@ public class Prestamo {
 	
 	public boolean getDevolucion() {
 		return devuelto;
-	}
-	
-	
-	
+	}	
 }

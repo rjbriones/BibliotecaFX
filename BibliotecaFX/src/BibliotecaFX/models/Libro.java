@@ -11,15 +11,15 @@ package BibliotecaFX.models;
  */
 public class Libro{
     
-   private int idLibro;
+        private int idLibro;
 	private String isbn;
 	private String nombre;
 	private String editorial;
 	private int paginas;	
 	private boolean disponible = true;
 	
-	public Libro(int variable0, String value, String bookName, String editorialName, int page) {
-		idLibro = variable0;
+	public Libro(int id, String value, String bookName, String editorialName, int page) {
+		idLibro = id;
 		isbn = value;
 		nombre = bookName;
 		editorial = editorialName;
