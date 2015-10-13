@@ -7,9 +7,13 @@
 package BibliotecaFX.controllers;
 
 import BibliotecaFX.MainApp;
+import BibliotecaFX.models.Libro;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 /**
  * FXML Controller class
@@ -18,6 +22,13 @@ import javafx.fxml.Initializable;
  */
 public class LibroController implements Initializable {
 
+    @FXML
+    private TableView<Libro> tbvLibros;
+    @FXML
+    private TableColumn<Libro, String> tbcID;
+    @FXML
+    private TableColumn<Libro, String> tbcTitulo;
+    
     private MainApp mainApp;
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
