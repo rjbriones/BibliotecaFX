@@ -5,6 +5,7 @@
  */
 package BibliotecaFX.controllers;
 
+import BibliotecaFX.MainApp;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
@@ -16,6 +17,11 @@ import javafx.fxml.Initializable;
  */
 public class UsuarioController implements Initializable {
 
+    private MainApp mainApp;
+    public void setMainApp(MainApp mainApp) {
+        this.mainApp = mainApp;
+        tbvUsuarios.setItems(mainApp.getUsuariosList());
+    }
     /**
      * Initializes the controller class.
      */

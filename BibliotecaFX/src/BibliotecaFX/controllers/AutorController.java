@@ -6,6 +6,7 @@
 
 package BibliotecaFX.controllers;
 
+import BibliotecaFX.MainApp;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
@@ -17,6 +18,12 @@ import javafx.fxml.Initializable;
  */
 public class AutorController implements Initializable {
 
+    private MainApp mainApp;
+    public void setMainApp(MainApp mainApp) {
+        this.mainApp = mainApp;
+        tbvAutores.setItems(mainApp.getAutoresList());
+    }
+    
     /**
      * Initializes the controller class.
      */

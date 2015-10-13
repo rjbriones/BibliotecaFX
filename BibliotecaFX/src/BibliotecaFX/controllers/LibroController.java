@@ -6,6 +6,7 @@
 
 package BibliotecaFX.controllers;
 
+import BibliotecaFX.MainApp;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
@@ -17,6 +18,11 @@ import javafx.fxml.Initializable;
  */
 public class LibroController implements Initializable {
 
+    private MainApp mainApp;
+    public void setMainApp(MainApp mainApp) {
+        this.mainApp = mainApp;
+        tbvLibros.setItems(mainApp.getLibrosList());
+    }
     /**
      * Initializes the controller class.
      */

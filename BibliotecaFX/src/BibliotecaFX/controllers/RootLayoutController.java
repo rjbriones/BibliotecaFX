@@ -6,31 +6,44 @@
 
 package BibliotecaFX.controllers;
 
+import BibliotecaFX.MainApp;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-
 /**
  *
  * @author informatica
  */
 public class RootLayoutController implements Initializable {
     
+    private MainApp mainApp;
+
+    public void setMainApp(MainApp mainApp) {
+        this.mainApp = mainApp;
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+    }
+
     @FXML
-    private Label label;
-    
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private void usuariosView(){
+        this.mainApp.mostrarVistaUsuarios();
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+    @FXML
+    private void librosView(){
+        this.mainApp.mostrarVistaLibros();
+    }
     
+    @FXML
+    private void autoresView(){
+        this.mainApp.mostrarVistaAutores();
+    }
+    
+    @FXML
+    private void ejemplaresView(){
+        this.mainApp.mostrarVistaEjemplares();
+    }
 }
