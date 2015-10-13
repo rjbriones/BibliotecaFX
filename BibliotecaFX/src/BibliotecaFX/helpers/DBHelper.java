@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author informatica
+ * @author rjavi
  */
 public class DBHelper {
     private Connection connection;

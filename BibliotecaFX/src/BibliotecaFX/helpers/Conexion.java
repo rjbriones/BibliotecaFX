@@ -8,7 +8,7 @@ package BibliotecaFX.helpers;
 
 /**
  *
- * @author Marco
+ * @author rjavi
  */
 import java.sql.Connection;
 import java.sql.Statement;

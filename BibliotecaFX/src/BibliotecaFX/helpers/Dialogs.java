@@ -13,7 +13,7 @@ import javafx.scene.layout.Priority;
 
 /**
  *
- * @author Javier
+ * @author rjavi
  */
 public class Dialogs {
     public static Alert getDialog(Alert.AlertType type, String title, String header, String content){

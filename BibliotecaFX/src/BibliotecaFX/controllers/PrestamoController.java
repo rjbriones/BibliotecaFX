@@ -18,7 +18,7 @@ import BibliotecaFX.helpers.Conexion;
 
 /**
  *
- * @author Marco
+ * @author rjavi
  */
 public class PrestamoController {
    

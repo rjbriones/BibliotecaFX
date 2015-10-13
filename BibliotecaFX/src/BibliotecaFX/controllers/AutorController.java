@@ -14,7 +14,7 @@ import BibliotecaFX.models.Autor;
 
 /**
  *
- * @author Marco
+ * @author rjavi
  */
 public class AutorController {
    

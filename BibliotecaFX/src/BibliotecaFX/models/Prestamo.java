@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 
 /**
  *
- * @author Marco
+ * @author rjavi
  */
 public class Prestamo {
     SimpleDateFormat simpledf = new SimpleDateFormat("yyyy MMM dd");	

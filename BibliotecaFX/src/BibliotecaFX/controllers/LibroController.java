@@ -15,7 +15,7 @@ import BibliotecaFX.models.Libro;
 
 /**
  *
- * @author Marco
+ * @author rjavi
  */
 public class LibroController {
    
